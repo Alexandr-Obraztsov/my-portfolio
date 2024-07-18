@@ -5,6 +5,7 @@ import styled from "styled-components";
 import {MyServices} from "./layouts/sections/myServices/MyServices";
 import {PricePlans} from "./layouts/sections/pricePlans/PricePlans";
 import {Recommendations} from "./layouts/sections/recommendations/Recommendations";
+import {Education} from "./layouts/sections/education/Education";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <MyServices/>
             <PricePlans/>
             <Recommendations/>
+            <Education/>
         </Box>
     );
 }
