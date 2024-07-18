@@ -32,7 +32,7 @@ const StyledService = styled.div`
     max-width: 310px;
     width: 100%;
     min-height: 225px;
-    background-color: #4598af;
+    background-color: #fbfbfb;
 `
 
 const Title = styled.h3`

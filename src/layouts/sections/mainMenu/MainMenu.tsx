@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../../components/button/Button";
+import {SectionDescription} from "../../../components/SectionDescription";
 
 export const MainMenu = () => {
     return (
@@ -19,11 +20,10 @@ const Title = styled.h2`
 `
 
 const Description = styled.p`
-    
 `
 
 const StyledMainMenu = styled.section`
-    background-color: #61dafb;
+    background-color: #e1f4bf;
     width: 100%;
     min-height: 500px;
 `

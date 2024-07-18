@@ -3,13 +3,14 @@ import './App.css';
 import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 import styled from "styled-components";
 import {MyServices} from "./layouts/sections/myServices/MyServices";
+import {PricePlans} from "./layouts/sections/pricePlans/PricePlans";
 
 function App() {
     return (
         <Box>
             <MainMenu/>
             <MyServices/>
-
+            <PricePlans/>
         </Box>
     );
 }
