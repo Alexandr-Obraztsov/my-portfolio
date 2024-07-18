@@ -38,6 +38,7 @@ export const PricePlan = (props: PricePlanPropsType) => {
 
 const StyledPricePlan = styled.div`
     background-color: #fdfdfd;
+    max-width: 310px;
     width: 100%;
 `
 

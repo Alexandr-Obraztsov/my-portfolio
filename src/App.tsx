@@ -4,6 +4,7 @@ import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 import styled from "styled-components";
 import {MyServices} from "./layouts/sections/myServices/MyServices";
 import {PricePlans} from "./layouts/sections/pricePlans/PricePlans";
+import {Recommendations} from "./layouts/sections/recommendations/Recommendations";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <MainMenu/>
             <MyServices/>
             <PricePlans/>
+            <Recommendations/>
         </Box>
     );
 }
