@@ -43,6 +43,6 @@ export const PricePlans = () => {
 };
 
 const StyledPricePlans = styled.section`
-    background-color: #d2fdf7;
+    background-color: #e0f2be;
 `
 
