@@ -6,11 +6,13 @@ import {FlexWrapper} from "../FlexWrapper";
 type ButtonPropsType = {
     href?: string,
     text?: string,
-    icon?: string,
+    icon?: {
+        id: string,
+        width: string,
+        height: string
+    },
     width?: string,
     height?: string,
-    iconWidth?: string,
-    iconHeight?: string,
     borderRadius?: string,
     shadow?: string,
 
@@ -21,8 +23,7 @@ export const Button = (props: ButtonPropsType) => {
         <StyledButton href={props.href || "#"}>
             <FlexWrapper justifyContent="center" alignItems="center" gap="10px">
                 {props.text}
-                {props.icon && <Icon id={props.icon} width={props.iconWidth} height={props.iconHeight}
-                                     viewBox={`0 0 ${props.iconWidth || "24"} ${props.iconHeight || "24"}`}/>}
+                {props.icon && <Icon id={props.icon.id} width={props.icon.width} height={props.icon.height}/>}
             </FlexWrapper>
         </StyledButton>
     );

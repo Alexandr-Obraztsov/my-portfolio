@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Icon from "./components/icon/Icon";
 import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 import styled from "styled-components";
+import {MyServices} from "./layouts/sections/myServices/MyServices";
 
 function App() {
     return (
         <Box>
             <MainMenu/>
+            <MyServices/>
+
         </Box>
     );
 }

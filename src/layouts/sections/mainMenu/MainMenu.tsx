@@ -9,7 +9,7 @@ export const MainMenu = () => {
             <Description>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
             </Description>
-            <Button text={"HIRE ME"} icon={"arrow"} iconWidth="12" iconHeight="12" borderRadius="5px"/>
+            <Button text={"HIRE ME"} icon={{id: "arrow", width: "12", height: "12"}} />
         </StyledMainMenu>
     );
 };
