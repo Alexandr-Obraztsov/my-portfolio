@@ -40,7 +40,7 @@ export const Portfolio = () => {
 };
 
 const StyledPorfolio = styled.section`
-    background-color: #e0e0fb;
+    background-color: #dff0bd;
 `
 
 const Menu = styled.ul`

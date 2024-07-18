@@ -8,6 +8,7 @@ import {Recommendations} from "./layouts/sections/recommendations/Recommendation
 import {Education} from "./layouts/sections/education/Education";
 import {WorkHistory} from "./layouts/sections/workHistory/WorkHistory";
 import {Portfolio} from "./layouts/sections/portfolio/Portfolio";
+import {Blog} from "./layouts/sections/blog/Blog";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Education/>
             <WorkHistory/>
             <Portfolio/>
+            <Blog/>
         </Box>
     );
 }
