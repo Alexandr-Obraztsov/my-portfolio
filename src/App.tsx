@@ -9,6 +9,8 @@ import {Education} from "./layouts/sections/education/Education";
 import {WorkHistory} from "./layouts/sections/workHistory/WorkHistory";
 import {Portfolio} from "./layouts/sections/portfolio/Portfolio";
 import {Blog} from "./layouts/sections/blog/Blog";
+import {FlexWrapper} from "./components/FlexWrapper";
+import {LeaveUsYourInfo} from "./layouts/sections/leaveUsYourInfo/LeaveUsYourInfo";
 
 function App() {
     return (
@@ -21,6 +23,9 @@ function App() {
             <WorkHistory/>
             <Portfolio/>
             <Blog/>
+            <FlexWrapper>
+                <LeaveUsYourInfo/>
+            </FlexWrapper>
         </Box>
     );
 }
