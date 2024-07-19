@@ -11,6 +11,7 @@ import {Portfolio} from "./layouts/sections/portfolio/Portfolio";
 import {Blog} from "./layouts/sections/blog/Blog";
 import {FlexWrapper} from "./components/FlexWrapper";
 import {LeaveUsYourInfo} from "./layouts/sections/leaveUsYourInfo/LeaveUsYourInfo";
+import {ContactInformation} from "./layouts/sections/contactInformation/ContactInformation";
 
 function App() {
     return (
@@ -23,8 +24,9 @@ function App() {
             <WorkHistory/>
             <Portfolio/>
             <Blog/>
-            <FlexWrapper>
+            <FlexWrapper alignItems="stretch">
                 <LeaveUsYourInfo/>
+                <ContactInformation/>
             </FlexWrapper>
         </Box>
     );

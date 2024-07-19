@@ -32,10 +32,12 @@ export const LeaveUsYourInfo = () => {
 
 const StyledLeaveUsYourInfo = styled.section`
     background-color: #deeebc;
+    flex: 1 1 100%;
 `
 
 const Form = styled.form`
-    background-color: #ffffff
+    background-color: #ffffff;
+    height: 100%;
 `
 
 const Field = styled.input`
