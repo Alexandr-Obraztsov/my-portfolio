@@ -8,7 +8,7 @@ export const ContactInformation = () => {
     return (
         <StyledContactInformation>
             <SectionTitle>Contact Information</SectionTitle>
-            <FlexWrapper direction="column" gap="10px" alignItems="stretch">
+            <FlexWrapper direction="column" gap="10px" alignItems="stretch" height="100%">
                 <ContactCard icon={{id: "location", width: "15", height: "15"}}
                              titles={["Country:", 'City:', "Streat:"]}
                              texts={["Bangladesh", "Dhaka", "35 vhatara, Badda"]}/>

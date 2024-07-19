@@ -33,6 +33,7 @@ export const LeaveUsYourInfo = () => {
 const StyledLeaveUsYourInfo = styled.section`
     background-color: #deeebc;
     flex: 1 1 100%;
+    height: 100%;
 `
 
 const Form = styled.form`

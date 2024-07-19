@@ -12,10 +12,14 @@ import {Blog} from "./layouts/sections/blog/Blog";
 import {FlexWrapper} from "./components/FlexWrapper";
 import {LeaveUsYourInfo} from "./layouts/sections/leaveUsYourInfo/LeaveUsYourInfo";
 import {ContactInformation} from "./layouts/sections/contactInformation/ContactInformation";
+import {Logos} from "./layouts/sections/logos/Logos";
+import {Footer} from "./layouts/footer/Footer";
+import {RightMenu} from "./layouts/asides/rightMenu/RightMenu";
 
 function App() {
     return (
         <Box>
+            <RightMenu/>
             <MainMenu/>
             <MyServices/>
             <PricePlans/>
@@ -28,6 +32,8 @@ function App() {
                 <LeaveUsYourInfo/>
                 <ContactInformation/>
             </FlexWrapper>
+            <Logos/>
+            <Footer/>
         </Box>
     );
 }
