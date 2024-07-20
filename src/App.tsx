@@ -15,10 +15,12 @@ import {ContactInformation} from "./layouts/sections/contactInformation/ContactI
 import {Logos} from "./layouts/sections/logos/Logos";
 import {Footer} from "./layouts/footer/Footer";
 import {RightMenu} from "./layouts/asides/rightMenu/RightMenu";
+import {LeftMenu} from "./layouts/asides/leftMenu/LeftMenu";
 
 function App() {
     return (
         <Box>
+            <LeftMenu/>
             <RightMenu/>
             <MainMenu/>
             <MyServices/>
