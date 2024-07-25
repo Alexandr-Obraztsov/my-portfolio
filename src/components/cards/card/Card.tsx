@@ -2,19 +2,23 @@ import React from 'react';
 import {CardPropsType} from "../CardPropsType";
 import styled from "styled-components";
 import {FlexWrapper} from "../../FlexWrapper";
+import {Description} from "../../Description";
+import {theme} from "../../../styles/Theme";
 
 export const Card = (props: CardPropsType) => {
     return (
         <StyledCard>
-            <FlexWrapper>
+            <FlexWrapper justifyContent="space-between">
                 <div>
                     <Title>{props.title1}</Title>
-                    <Description1>{props.description1}</Description1>
-                    <Date>{props.date}</Date>
+                    <FlexWrapper gap="21px">
+                        <Rank>{props.description1}</Rank>
+                        <Date>{props.date}</Date>
+                    </FlexWrapper>
                 </div>
                 <div>
                     <Title>{props.title2}</Title>
-                    <Description2>{props.description2}</Description2>
+                    <Description>{props.description2}</Description>
                 </div>
             </FlexWrapper>
         </StyledCard>
@@ -22,23 +26,47 @@ export const Card = (props: CardPropsType) => {
 };
 
 const StyledCard = styled.div`
-    ${FlexWrapper} > div:first-child {
-        width: 80%;
+    padding: 47px 30px 11px;
+    position: relative;
+    
+    & + & {
+        &:before {
+            content: "";
+            width: calc(100% - 94px);
+            height: 2px;
+            background-color: ${theme.colors.primaryBg};
+            display: inline-block;
+            top: -11px;
+            position: absolute;
+            
+        }
+    }
+    
+    
+    div + div {
+        flex: 0 1 60%;
     }
 `
 
 const Title = styled.h3`
+    margin-bottom: 28px;
+    font-weight: 500;
+    font-size: 18px;
     
-`
-
-const Description1 = styled.span`
-    
-`
-
-const Description2 = styled.p`
-    
+    & + ${Description} {
+        max-width: unset;
+    }
 `
 
 const Date = styled.span`
-    
+    font-size: 10px;
+    font-weight: 400;
+    color: ${theme.colors.secondaryBg};
+    display: inline-block;
+    padding: 4px 7px;
+    background-color: ${theme.colors.accent};
+`
+
+const Rank = styled.span`
+
 `

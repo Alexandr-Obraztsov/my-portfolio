@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
 import {CardPropsType} from "./CardPropsType";
 import {Card} from "./card/Card";
+import {theme} from "../../styles/Theme";
 
 
 export const Cards = (props: {cards: Array<CardPropsType>}) => {
@@ -24,5 +25,5 @@ export const Cards = (props: {cards: Array<CardPropsType>}) => {
 };
 
 const StyledCards = styled.div`
-    background-color: aliceblue;
+    background-color: ${theme.colors.secondaryBg};
 `

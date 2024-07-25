@@ -40,5 +40,5 @@ export const Education = () => {
 };
 
 const StyledEducation = styled.section`
-    background-color: #e0f2be;
+
 `

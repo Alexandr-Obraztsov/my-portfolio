@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import Icon from "../../../../components/icon/Icon";
-import {Service} from "../../myServices/service/Service";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {theme} from "../../../../styles/Theme";
 import {Description} from "../../../../components/Description";
