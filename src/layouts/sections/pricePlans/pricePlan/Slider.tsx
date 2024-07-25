@@ -5,6 +5,7 @@ import jamesPhoto from "../../../../assets/images/james.webp";
 import tianaPhoto from "../../../../assets/images/tiana.webp";
 import talanPhoto from "../../../../assets/images/talan.webp";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 export const Slider = () => {
     return (
@@ -44,10 +45,11 @@ const Pagination = styled.span`
 
 const PaginationItem = styled.span`
     display: inline-block;
-    background-color: red;
+    background-color: ${theme.colors.accent};
     width: 10px;
     height: 10px;
     border-radius: 5px;
+    margin-top: 50px;
 `
 
 const StyledSlider = styled.ul`

@@ -7,7 +7,7 @@ import {Menu} from "./menu/Menu";
 export const RightMenu = () => {
     return (
         <StyledRightMenu>
-            <FlexWrapper alignItems="center" justifyContent="flex-start" direction="column" height="100%">
+            <FlexWrapper alignItems="center" justifyContent="flex-start" direction="column">
                 <Icon id="contrast" width="25" height="25"/>
                 <Menu/>
             </FlexWrapper>

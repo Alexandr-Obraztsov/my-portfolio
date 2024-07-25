@@ -17,4 +17,5 @@ export const Rating = (props: {stars: number}) => {
 };
 
 const StyledRating = styled.div`
+    margin-bottom: 16px;
 `

@@ -16,6 +16,6 @@ export const Recommendations = () => {
 };
 
 const StyledRecommendations = styled.section`
-    background-color: #e0e0fb;
+    background-color: ;
 `
 
