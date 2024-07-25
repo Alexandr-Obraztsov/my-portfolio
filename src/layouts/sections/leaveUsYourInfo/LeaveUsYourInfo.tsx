@@ -32,7 +32,7 @@ export const LeaveUsYourInfo = () => {
 
 const StyledLeaveUsYourInfo = styled.section`
     background-color: #deeebc;
-    flex: 1 1 100%;
+    flex: 1 2 70%;
     height: 100%;
 `
 

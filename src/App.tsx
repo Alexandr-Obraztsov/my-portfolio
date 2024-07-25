@@ -14,14 +14,11 @@ import {LeaveUsYourInfo} from "./layouts/sections/leaveUsYourInfo/LeaveUsYourInf
 import {ContactInformation} from "./layouts/sections/contactInformation/ContactInformation";
 import {Logos} from "./layouts/sections/logos/Logos";
 import {Footer} from "./layouts/footer/Footer";
-import {RightMenu} from "./layouts/asides/rightMenu/RightMenu";
-import {LeftMenu} from "./layouts/asides/leftMenu/LeftMenu";
+
 
 function App() {
     return (
         <Box>
-            <LeftMenu/>
-            <RightMenu/>
             <MainMenu/>
             <MyServices/>
             <PricePlans/>
@@ -30,7 +27,7 @@ function App() {
             <WorkHistory/>
             <Portfolio/>
             <Blog/>
-            <FlexWrapper alignItems="stretch">
+            <FlexWrapper>
                 <LeaveUsYourInfo/>
                 <ContactInformation/>
             </FlexWrapper>
@@ -42,8 +39,9 @@ function App() {
 
 
 const Box = styled.div`
-    padding-left: 335px;
-    padding-right: 135px;
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
 `
 
 

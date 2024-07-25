@@ -24,6 +24,7 @@ export const ContactInformation = () => {
 };
 
 const StyledContactInformation = styled.section`
-    flex: 1 1 80%;
+    flex: 1 1 40%;
+    height: 100%;
     background-color: #dfdff9;
 `

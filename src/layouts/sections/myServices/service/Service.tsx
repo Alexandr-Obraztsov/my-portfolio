@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import Icon from "../../../../components/icon/Icon";
 import {Button} from "../../../../components/button/Button";
+import {theme} from "../../../../styles/Theme";
 
 type ServicePropsType = {
     icon?: {
@@ -28,17 +29,27 @@ export const Service = (props: ServicePropsType) => {
     );
 };
 
+
 const StyledService = styled.div`
-    max-width: 310px;
-    width: 100%;
+    flex: 1 1 30%;
     min-height: 225px;
     background-color: #fbfbfb;
+    padding: 30px 20px;
 `
 
 const Title = styled.h3`
-    
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    color: ${theme.colors.primaryText};
+    text-transform: capitalize;
 `
 
 const Description = styled.p`
-
+    text-align: center;
+    text-transform: capitalize;
+    color: ${theme.colors.secondaryText};
+    font-weight: 400;
+    font-size: 15px;
 `

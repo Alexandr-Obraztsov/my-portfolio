@@ -29,7 +29,7 @@ export const ContactCard = (props: ContactCardPropsType) => {
 
 const StyledContactCard = styled.div`
     background-color: aliceblue;
-    height: 100px;
+    flex: 1 1 auto;
 `
 
 const RightText = styled.span`

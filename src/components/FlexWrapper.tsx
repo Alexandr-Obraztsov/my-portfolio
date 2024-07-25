@@ -14,10 +14,10 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justifyContent || 'flex-start'};
-    align-items: ${props => props.alignItems || 'flex-start'};
+    align-items: ${props => props.alignItems || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
     gap: ${props => props.gap || '0'};
     max-width: ${props => props.width || '100%'};
     width: 100%;
-    height: ${props => props.height || 'unset'};
+    height: 100%;
 `
