@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {SectionDescription} from "../../../components/SectionDescription";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {PricePlan} from "./pricePlan/PricePlan";
+import {theme} from "../../../styles/Theme";
 
 const plans = [
     {
@@ -17,7 +18,8 @@ const plans = [
         title: "gold",
         price: "50.00",
         description: "For most businesses that want to optimize web queries",
-        includes: [true, true, true, true, false, false, false, false]
+        includes: [true, true, true, true, false, false, false, false],
+        comment: "Most Popular"
     },
 
     {
@@ -35,7 +37,7 @@ export const PricePlans = () => {
             <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
             <FlexWrapper justifyContent="center" gap="20px" >
                 {plans.map((plan)=>{
-                    return <PricePlan title={plan.title} price={plan.price} description={plan.description} includes={plan.includes}/>
+                    return <PricePlan title={plan.title} price={plan.price} description={plan.description} includes={plan.includes} comment={plan.comment}/>
                 })}
             </FlexWrapper>
         </StyledPricePlans>
@@ -43,6 +45,6 @@ export const PricePlans = () => {
 };
 
 const StyledPricePlans = styled.section`
-    background-color: #e0f2be;
+    background-color: ${theme.colors.primaryBg};
 `
 
