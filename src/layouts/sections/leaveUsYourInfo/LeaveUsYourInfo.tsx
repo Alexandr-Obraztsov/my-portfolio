@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Button} from "../../../components/button/Button";
+import {Link} from "../../../components/link/Link";
 
 export const LeaveUsYourInfo = () => {
     return (
@@ -24,7 +24,7 @@ export const LeaveUsYourInfo = () => {
                     Your Message
                     <Field as="textarea" name="message"/>
                 </Label>
-                <Button as="button" type="submit" text="Send Message"/>
+                <Link text="Send Message"/>
             </Form>
         </StyledLeaveUsYourInfo>
     );

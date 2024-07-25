@@ -3,15 +3,15 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Service} from "./service/Service";
-import {SectionDescription} from "../../../components/SectionDescription";
+import {Description} from "../../../components/Description";
 import {theme} from "../../../styles/Theme";
 
 export const MyServices = () => {
     return (
         <StyledMyServices>
             <SectionTitle>My Services</SectionTitle>
-            <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit. lorem ipsum</SectionDescription>
+            <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. lorem ipsum</Description>
             <FlexWrapper direction="column" alignItems="center">
                 <FlexWrapper gap="20px" wrap="wrap">
                     <Service icon={{id: "coding", width: "68", height: "68"}} title="web development"

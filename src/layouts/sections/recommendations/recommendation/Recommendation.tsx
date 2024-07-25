@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Rating} from "./Rating";
 import {theme} from "../../../../styles/Theme";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {Description} from "../../../../components/Description";
 
 type RecommendationPropsType = {
     stars: number,
@@ -18,12 +19,12 @@ export const Recommendation = (props: RecommendationPropsType) => {
         <StyledRecommendation>
             <Rating stars={props.stars}/>
             <Title>{props.title}</Title>
-            <Message>{props.message}</Message>
+            <Description>{props.message}</Description>
             <FlexWrapper gap="25px" alignItems="center">
                 <Image src={props.photo}/>
                 <FlexWrapper direction="column" gap="5px" justifyContent="center">
                     <Username>{props.username}</Username>
-                    <UsernameDescription>{props.usernameDescription}</UsernameDescription>
+                    <Description>{props.usernameDescription}</Description>
                 </FlexWrapper>
             </FlexWrapper>
         </StyledRecommendation>
@@ -35,6 +36,7 @@ const StyledRecommendation = styled.div`
     max-width: 310px;
     width: 100%;
     padding: 25px;
+    height: 100%;
 `
 
 const Title = styled.h3`
@@ -42,13 +44,6 @@ const Title = styled.h3`
     font-size: 18px;
     font-weight: 500;
     color: ${theme.colors.primaryText};
-`
-
-const Message = styled.p`
-    font-size: 15px;
-    font-weight: 400;
-    color: ${theme.colors.secondaryText};
-    margin-bottom: 30px;
 `
 
 const Image = styled.img`
@@ -62,10 +57,4 @@ const Username = styled.span`
     font-size: 18px;
     font-weight: 500;
     color: ${theme.colors.primaryText};
-`
-
-const UsernameDescription = styled.span`
-    font-size: 15px;
-    font-weight: 400;
-    color: ${theme.colors.secondaryText};
 `

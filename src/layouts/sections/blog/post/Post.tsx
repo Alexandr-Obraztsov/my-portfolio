@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Button} from "../../../../components/button/Button";
+import {Link} from "../../../../components/link/Link";
 
 type PostPropsType = {
     src: string,
@@ -15,7 +15,7 @@ export const Post = (props : PostPropsType) => {
             <Image src={props.src}/>
             <Title>{props.title}</Title>
             <Description>{props.description}</Description>
-            <Button text="Learn More" href={props.link || "#"} icon={{id: "little-arrow", width: "6", height: "8"}}/>
+            <Link text="Learn More" href={props.link || "#"} icon={{id: "little-arrow", width: "6", height: "8"}} clear/>
         </StyledPost>
     );
 };

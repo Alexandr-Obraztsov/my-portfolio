@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {SectionDescription} from "../../../components/SectionDescription";
+import {Description} from "../../../components/Description";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import proj1 from "../../../assets/images/proj-1.webp";
 import proj2 from "../../../assets/images/proj-2.webp";
@@ -16,8 +16,8 @@ export const Portfolio = () => {
     return (
         <StyledPorfolio>
             <SectionTitle>Portfolio</SectionTitle>
-            <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit. lorem ipsum</SectionDescription>
+            <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. lorem ipsum</Description>
             <Menu>
                 <FlexWrapper gap="10px" justifyContent="center">
                     {menuItemNames.map((name) => {

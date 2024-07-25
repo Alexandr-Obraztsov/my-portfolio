@@ -5,7 +5,7 @@ import Icon from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Progress} from "./progress/Progress";
 import {ExtraSkillList} from "./extraSkillList/ExtraSkillList";
-import {Button} from "../../../components/button/Button";
+import {Link} from "../../../components/link/Link";
 
 export const LeftMenu = () => {
     return (
@@ -39,7 +39,7 @@ export const LeftMenu = () => {
             <Progress text="WordPress" value="85"/>
             <Title>Extra Skills</Title>
             <ExtraSkillList/>
-            <Button text="Download CV" href="#"/>
+            <Link text="Download CV" href="#"/>
         </StyledLeftMenu>
     );
 };

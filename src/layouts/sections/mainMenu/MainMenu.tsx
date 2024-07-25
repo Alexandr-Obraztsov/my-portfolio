@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import {Button} from "../../../components/button/Button";
+import {Link} from "../../../components/link/Link";
 import {theme} from "../../../styles/Theme";
 import me from "../../../assets/images/me.png";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Description} from "../../../components/Description";
 
 export const MainMenu = () => {
     return (
@@ -11,11 +12,11 @@ export const MainMenu = () => {
                 <FlexWrapper justifyContent="space-between" wrap="wrap">
                     <Content>
                         <Title>I’m Rayan Adlrdard <span>Front-end</span> Developer</Title>
-                        <Description>
+                        <Description margin="0 0 25px">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis.
                             Natoque rutrum semper sed suspendisse nunc lectus.
                         </Description>
-                        <Button text={"HIRE ME"} icon={{id: "arrow", width: "12", height: "12"}}/>
+                        <Link text={"HIRE ME"} icon={{id: "arrow", width: "12", height: "12"}}/>
                     </Content>
                     <Picture src={me}/>
                 </FlexWrapper>
@@ -32,14 +33,6 @@ const Title = styled.h2`
     span {
         color: ${theme.colors.accent};
     }
-`
-
-const Description = styled.p`
-    font-size: 16px;
-    font-weight: 400;
-    color: ${theme.colors.secondaryText};
-    max-width: 450px;
-    margin-bottom: 25px;
 `
 
 const StyledMainMenu = styled.section`

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {SectionDescription} from "../../../components/SectionDescription";
+import {Description} from "../../../components/Description";
 import {Cards} from "../../../components/cards/Cards";
 
 const cards = [
@@ -32,8 +32,8 @@ export const WorkHistory = () => {
     return (
         <StyledEducation>
             <SectionTitle>Work History</SectionTitle>
-            <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit. lorem ipsum</SectionDescription>
+            <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. lorem ipsum</Description>
             <Cards cards={cards}/>
         </StyledEducation>
     );

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import Icon from "../../../../components/icon/Icon";
 import {Service} from "../../myServices/service/Service";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
-import {Button} from "../../../../components/button/Button";
 import {theme} from "../../../../styles/Theme";
+import {Description} from "../../../../components/Description";
 
 type PricePlanPropsType = {
     comment?: string,
@@ -29,7 +29,7 @@ export const PricePlan = (props: PricePlanPropsType) => {
                     </FlexWrapper>
                 </Price>
 
-                <Description>{props.description}</Description>
+                <Description margin="0 0 21px" centered>{props.description}</Description>
                 <ServiceList>
                     {props.includes.map((value, index) => {
                         return <ServiceItem>
@@ -40,7 +40,7 @@ export const PricePlan = (props: PricePlanPropsType) => {
                         </ServiceItem>
                     })}
                 </ServiceList>
-                <Button text="Order now"/>
+                <RoundLink>Order now</RoundLink>
             </FlexWrapper>
         </StyledPricePlan>
     );
@@ -76,14 +76,6 @@ const Price = styled.span`
     }
 `
 
-const Description = styled.p`
-    font-size: 15px;
-    text-align: center;
-    font-weight: 400;
-    color: ${theme.colors.secondaryText};
-    margin-bottom: 21px;
-`
-
 const ServiceList = styled.ul`
     margin-bottom: 21px;
     width: 100%;
@@ -113,4 +105,20 @@ const Comment = styled.span`
     align-items: center;
     font-size: 15px;
     font-weight: 400;
+`
+const RoundLink = styled.a`
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    padding: 10px 40px;
+    background-color: ${theme.colors.accent};
+    border-radius: 30px;
+    background-color: ${theme.colors.secondaryBg};
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.14);
+
+    &:hover {
+        background-color: ${theme.colors.accent};
+    }
 `
