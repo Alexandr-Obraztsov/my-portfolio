@@ -10,6 +10,9 @@ import proj4 from "../../../assets/images/proj-4.webp";
 import proj5 from "../../../assets/images/proj-5.webp";
 import proj6 from "../../../assets/images/proj-6.webp";
 import {Project} from "./project/Project";
+import {theme} from "../../../styles/Theme";
+
+
 const menuItemNames = ["All categories", "UI Design", "Web Templates", "Logo", "Branding"]
 
 export const Portfolio = () => {
@@ -19,15 +22,15 @@ export const Portfolio = () => {
             <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                 consequat duis enim velit mollit. lorem ipsum</Description>
             <Menu>
-                <FlexWrapper gap="10px" justifyContent="center">
+                <FlexWrapper gap="37px" justifyContent="center">
                     {menuItemNames.map((name) => {
                         return <MenuItem>
-                            <MenuItemLink href="#">{name}</MenuItemLink>
+                            <a href="#">{name}</a>
                         </MenuItem>
                     })}
                 </FlexWrapper>
             </Menu>
-            <FlexWrapper wrap="wrap" justifyContent="center" gap="10px">
+            <FlexWrapper wrap="wrap" justifyContent="center" gap="20px">
                 <Project imgSrc={proj1}/>
                 <Project imgSrc={proj2}/>
                 <Project imgSrc={proj3}/>
@@ -40,17 +43,21 @@ export const Portfolio = () => {
 };
 
 const StyledPorfolio = styled.section`
-    background-color: #dff0bd;
 `
 
 const Menu = styled.ul`
     list-style: none;
+    margin-bottom: 50px;
 `
 
 const MenuItem = styled.li`
-
-`
-
-const MenuItemLink = styled.a`
-    text-decoration: none;
+    a {
+      color: ${theme.colors.primaryText};
+        font-weight: 500;
+        font-size: 18px;
+        
+        &:hover {
+            color: ${theme.colors.accent};
+        }
+    }
 `

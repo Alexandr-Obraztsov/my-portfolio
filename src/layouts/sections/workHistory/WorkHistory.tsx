@@ -40,5 +40,4 @@ export const WorkHistory = () => {
 };
 
 const StyledEducation = styled.section`
-    background-color: #dfdff9;
 `
