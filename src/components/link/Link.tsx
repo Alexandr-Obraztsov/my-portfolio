@@ -43,8 +43,10 @@ const StyledButton = styled.a<StyledLinkPropsType>`
     border-radius: 5px;
 
     ${props => props.clear && css`
+        font-size: 18px;
         background-color: transparent;
         color: ${theme.colors.accent};
+        padding: 0;
     `}
 `
 

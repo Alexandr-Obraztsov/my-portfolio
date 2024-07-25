@@ -24,6 +24,5 @@ export const Blog = () => {
 };
 
 const StyledBlog = styled.section`
-    background-color: #dfdff9;
 `
 
