@@ -13,7 +13,8 @@ type LinkPropsType = {
         height: string
     },
     padding?: string;
-    clear?: boolean
+    clear?: boolean,
+    borderRadius?: string
 }
 
 export const Link = (props: LinkPropsType) => {
@@ -29,7 +30,8 @@ export const Link = (props: LinkPropsType) => {
 
 type StyledLinkPropsType = {
     padding?: string,
-    clear?: boolean
+    clear?: boolean,
+    borderRadius?: string,
 }
 
 const StyledButton = styled.a<StyledLinkPropsType>`
@@ -40,7 +42,7 @@ const StyledButton = styled.a<StyledLinkPropsType>`
     color: black;
     padding: ${props => props.padding || "16px 32px"};
     background-color: ${theme.colors.accent};
-    border-radius: 5px;
+    border-radius: ${props => props.borderRadius || "0"};
 
     ${props => props.clear && css`
         font-size: 18px;

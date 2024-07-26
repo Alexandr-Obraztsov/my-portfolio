@@ -9,11 +9,9 @@ import {Education} from "./layouts/sections/education/Education";
 import {WorkHistory} from "./layouts/sections/workHistory/WorkHistory";
 import {Portfolio} from "./layouts/sections/portfolio/Portfolio";
 import {Blog} from "./layouts/sections/blog/Blog";
-import {FlexWrapper} from "./components/FlexWrapper";
-import {LeaveUsYourInfo} from "./layouts/sections/leaveUsYourInfo/LeaveUsYourInfo";
-import {ContactInformation} from "./layouts/sections/contactInformation/ContactInformation";
 import {Logos} from "./layouts/sections/logos/Logos";
 import {Footer} from "./layouts/footer/Footer";
+import {Contacts} from "./layouts/sections/contacts/Contacts";
 
 
 function App() {
@@ -27,10 +25,7 @@ function App() {
             <WorkHistory/>
             <Portfolio/>
             <Blog/>
-            <FlexWrapper>
-                <LeaveUsYourInfo/>
-                <ContactInformation/>
-            </FlexWrapper>
+            <Contacts/>
             <Logos/>
             <Footer/>
         </Box>

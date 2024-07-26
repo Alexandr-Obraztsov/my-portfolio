@@ -36,6 +36,7 @@ const Title = styled.h2`
 `
 
 const StyledMainMenu = styled.section`
+    margin-top: 20px;
     background-color: ${theme.colors.secondaryBg};
     padding: 0 60px;
 `
