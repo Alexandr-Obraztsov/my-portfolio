@@ -17,5 +17,5 @@ export const Logos = () => {
 };
 
 const StyledLogos = styled.section`
-    margin: 70px 0;
+    margin-top: 70px;
 `
