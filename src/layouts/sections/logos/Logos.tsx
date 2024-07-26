@@ -17,5 +17,5 @@ export const Logos = () => {
 };
 
 const StyledLogos = styled.section`
- background-color: #dfdff9;
+    margin: 70px 0;
 `
