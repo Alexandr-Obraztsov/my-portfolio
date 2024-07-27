@@ -1,15 +1,13 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
 type DescriptionPropsType = {
-    centered?: boolean,
     margin?: string
+    centered?: boolean
 }
 
 export const Description = styled.p<DescriptionPropsType>`
-    ${props => props.centered && css`text-align: center;`}
-    max-width: 440px;
-    width: 100%;
+    text-align: ${props => props.centered ? "center" : "left"};
     margin: ${props => props.margin || "0 auto 50px"};
     color: ${theme.colors.secondaryText};
     font-size: 15px;

@@ -9,7 +9,7 @@ import {Description} from "../../../components/Description";
 export const MainMenu = () => {
     return (
         <StyledMainMenu id="home">
-                <FlexWrapper justifyContent="space-between" wrap="wrap">
+                <FlexWrapper justifyContent="center" wrap="wrap">
                     <Content>
                         <Title>I’m Rayan Adlrdar<br/><span>Front-end</span> Developer</Title>
                         <Description margin="0 0 25px">

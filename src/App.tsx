@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import styled from "styled-components";
 import {MyServices} from "./layouts/sections/myServices/MyServices";
 import {PricePlans} from "./layouts/sections/pricePlans/PricePlans";
@@ -19,10 +18,10 @@ import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 
 function App() {
     return (
-        <FlexWrapper alignItems="flex-start" gap="20px">
+        <FlexWrapper alignItems="flex-start" gap="20px" justifyContent="center">
             <Content>
                 <LeftMenu/>
-                <MainContent>
+                <Container>
                     <MainMenu/>
                     <MyServices/>
                     <PricePlans/>
@@ -34,7 +33,7 @@ function App() {
                     <Contacts/>
                     <Logos/>
                     <Footer/>
-                </MainContent>
+                </Container>
             </Content>
 
             <RightMenu/>
@@ -43,7 +42,9 @@ function App() {
 }
 
 
-const MainContent = styled.div`
+const Container = styled.div`
+    max-width: 1440px;
+    width: 100%;
 `
 
 const Content = styled.div`

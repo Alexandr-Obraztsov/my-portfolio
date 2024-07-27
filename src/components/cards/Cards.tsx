@@ -10,8 +10,8 @@ export const Cards = (props: {cards: Array<CardPropsType>}) => {
     return (
         <StyledCards>
             <FlexWrapper direction="column" alignItems="center">
-                {props.cards.map((cardProps)=>{
-                    return <Card
+                {props.cards.map((cardProps, index)=>{
+                    return <Card key={index}
                         title1={cardProps.title1}
                         title2={cardProps.title2}
                         description1={cardProps.description1}

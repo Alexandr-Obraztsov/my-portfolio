@@ -39,8 +39,8 @@ export const Contacts = () => {
         <Grid id="contact">
             <SectionTitle left>Leave Us Your Info</SectionTitle>
             <SectionTitle left>Contact Information</SectionTitle>
-            {cardsData.map(obj => {
-                return <ContactCard icon={obj.icon} titles={obj.titles} texts={obj.texts}/>
+            {cardsData.map((obj, index) => {
+                return <ContactCard icon={obj.icon} titles={obj.titles} texts={obj.texts} key={index}/>
             })}
             <Form/>
         </Grid>

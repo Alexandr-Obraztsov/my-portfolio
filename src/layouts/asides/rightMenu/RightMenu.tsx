@@ -8,8 +8,10 @@ import {theme} from "../../../styles/Theme";
 export const RightMenu = () => {
     return (
         <StyledRightMenu>
-            <FlexWrapper alignItems="center" justifyContent="flex-start" gap="120px" direction="column" height="100%">
+            <IconWrapper>
                 <Icon id="contrast" width="30" height="30"/>
+            </IconWrapper>
+            <FlexWrapper alignItems="center" justifyContent="center" gap="120px" direction="column" height="100%">
                 <Menu/>
             </FlexWrapper>
         </StyledRightMenu>
@@ -20,6 +22,10 @@ const StyledRightMenu = styled.aside`
     height: 100vh;
     width: 108px;
     background-color: ${theme.colors.secondaryBg};
-    padding: 50px 10px;
+    padding: 50px 10px 80px 10px;
     flex-shrink: 0;
+`
+
+const IconWrapper = styled.div`
+    text-align: center;
 `

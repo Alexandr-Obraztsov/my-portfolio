@@ -16,7 +16,7 @@ export const LeftMenu = () => {
                 <FlexWrapper direction="column" alignItems="center">
                     <Image src={me}/>
                     <Title>Rayan Adlardard</Title>
-                    <Description margin="0 0 15px 0" centered>Font-end Developer</Description>
+                    <Description margin="0 0 15px 0">Font-end Developer</Description>
                     <SocialMenu/>
                 </FlexWrapper>
             </Section>

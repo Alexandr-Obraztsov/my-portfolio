@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Description} from "../../../components/Description";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {PricePlan} from "./pricePlan/PricePlan";
 import {theme} from "../../../styles/Theme";
+import {SectionDescription} from "../../../components/SectionDescription";
 
 const plans = [
     {
@@ -34,7 +34,7 @@ export const PricePlans = () => {
     return (
         <StyledPricePlans id="cv">
             <SectionTitle>Price Plans</SectionTitle>
-            <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</Description>
+            <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
             <FlexWrapper justifyContent="center" gap="20px" >
                 {plans.map((plan)=>{
                     return <PricePlan title={plan.title} price={plan.price} description={plan.description} includes={plan.includes} comment={plan.comment}/>

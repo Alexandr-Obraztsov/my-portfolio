@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Icon} from "../../../../components/icon/Icon";
 import {Link} from "../../../../components/link/Link";
@@ -32,8 +32,6 @@ export const Service = (props: ServicePropsType) => {
 
 const ImageWrapper = styled.div`
     margin-bottom: 25px;
-    
-    
 `
 
 const StyledService = styled.div`

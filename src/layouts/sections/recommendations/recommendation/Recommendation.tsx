@@ -31,9 +31,9 @@ export const Recommendation = (props: RecommendationPropsType) => {
     );
 };
 
+
 const StyledRecommendation = styled.div`
     background-color: #ffffff;
-    flex: 1 1 auto;
     padding: 25px;
     height: 100%;
 `

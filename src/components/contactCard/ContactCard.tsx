@@ -22,7 +22,7 @@ export const ContactCard = (props: ContactCardPropsType) => {
                 <Icon id={props.icon.id} width={props.icon.width} height={props.icon.height}/>
             </IconWrapper>
             {props.titles.map((title, index) =>
-                <FlexWrapper justifyContent="space-between" wrap="wrap">
+                <FlexWrapper justifyContent="space-between" wrap="wrap" key={index}>
                     <Text>{title}</Text>
                     <Description>{props.texts[index]}</Description>
                 </FlexWrapper>

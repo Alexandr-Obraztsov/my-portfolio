@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Description} from "../../../components/Description";
 import {Cards} from "../../../components/cards/Cards";
+import {SectionDescription} from "../../../components/SectionDescription";
 
 const cards = [
     {
@@ -32,8 +32,8 @@ export const Education = () => {
     return (
         <StyledEducation>
             <SectionTitle>Education</SectionTitle>
-            <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                consequat duis enim velit mollit. lorem ipsum</Description>
+            <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. lorem ipsum</SectionDescription>
             <Cards cards={cards}/>
         </StyledEducation>
     );

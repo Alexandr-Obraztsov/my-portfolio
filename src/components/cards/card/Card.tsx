@@ -8,7 +8,7 @@ import {theme} from "../../../styles/Theme";
 export const Card = (props: CardPropsType) => {
     return (
         <StyledCard>
-            <FlexWrapper justifyContent="space-between">
+            <FlexWrapper justifyContent="space-between" wrap="wrap">
                 <div>
                     <Title>{props.title1}</Title>
                     <FlexWrapper gap="21px">
@@ -18,12 +18,16 @@ export const Card = (props: CardPropsType) => {
                 </div>
                 <div>
                     <Title>{props.title2}</Title>
-                    <Description>{props.description2}</Description>
+                    <StyledDescription>{props.description2}</StyledDescription>
                 </div>
             </FlexWrapper>
         </StyledCard>
     );
 };
+
+const StyledDescription = styled(Description)`
+    text-align: justify;
+`
 
 const StyledCard = styled.div`
     padding: 47px 30px 11px;
@@ -41,7 +45,6 @@ const StyledCard = styled.div`
             
         }
     }
-    
     
     div + div {
         flex: 0 1 60%;

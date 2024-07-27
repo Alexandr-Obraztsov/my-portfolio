@@ -56,4 +56,6 @@ const StyledSlider = styled.ul`
 
 `
 
-const Slide = styled.li``
+const Slide = styled.li`
+    flex: 1 1 auto;
+`
