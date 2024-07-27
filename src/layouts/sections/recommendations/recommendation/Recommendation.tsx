@@ -20,7 +20,7 @@ export const Recommendation = (props: RecommendationPropsType) => {
             <Rating stars={props.stars}/>
             <Title>{props.title}</Title>
             <Description>{props.message}</Description>
-            <FlexWrapper gap="25px" alignItems="center">
+            <FlexWrapper gap="25px" alignItems="center" wrap="wrap">
                 <Image src={props.photo}/>
                 <FlexWrapper direction="column" gap="5px" justifyContent="center">
                     <Username>{props.username}</Username>
@@ -32,9 +32,8 @@ export const Recommendation = (props: RecommendationPropsType) => {
 };
 
 const StyledRecommendation = styled.div`
-    background-color: #ffffff;    
-    max-width: 310px;
-    width: 100%;
+    background-color: #ffffff;
+    flex: 1 1 auto;
     padding: 25px;
     height: 100%;
 `

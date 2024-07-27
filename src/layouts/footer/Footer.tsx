@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import Icon from "../../components/icon/Icon";
+import {Icon} from "../../components/icon/Icon";
 import {theme} from "../../styles/Theme";
 
 export const Footer = () => {

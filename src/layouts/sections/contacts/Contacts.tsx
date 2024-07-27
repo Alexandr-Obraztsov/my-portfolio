@@ -36,7 +36,7 @@ const cardsData = [
 
 export const Contacts = () => {
     return (
-        <Grid>
+        <Grid id="contact">
             <SectionTitle left>Leave Us Your Info</SectionTitle>
             <SectionTitle left>Contact Information</SectionTitle>
             {cardsData.map(obj => {

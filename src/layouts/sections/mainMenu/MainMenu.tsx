@@ -8,10 +8,10 @@ import {Description} from "../../../components/Description";
 
 export const MainMenu = () => {
     return (
-        <StyledMainMenu>
+        <StyledMainMenu id="home">
                 <FlexWrapper justifyContent="space-between" wrap="wrap">
                     <Content>
-                        <Title>I’m Rayan Adlrdard <span>Front-end</span> Developer</Title>
+                        <Title>I’m Rayan Adlrdar<br/><span>Front-end</span> Developer</Title>
                         <Description margin="0 0 25px">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis.
                             Natoque rutrum semper sed suspendisse nunc lectus.
@@ -36,15 +36,14 @@ const Title = styled.h2`
 `
 
 const StyledMainMenu = styled.section`
-    margin-top: 20px;
     background-color: ${theme.colors.secondaryBg};
     padding: 0 60px;
 `
 
 const Content = styled.article`
-    flex: 1 2 100px;
     padding-top: 90px;
     padding-bottom: 74px;
+    flex: 1 1 300px;
 `
 
 const Picture = styled.img`

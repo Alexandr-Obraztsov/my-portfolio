@@ -24,8 +24,8 @@ export const Post = (props : PostPropsType) => {
 };
 
 const StyledPost = styled.article`
-    max-width: 310px;
-    width: 100%;
+    flex: 1 1 auto;
+    max-width: 33%;
     background-color: #fdfdfd;
 `
 

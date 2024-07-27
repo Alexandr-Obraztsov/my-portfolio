@@ -8,7 +8,7 @@ import {theme} from "../../../styles/Theme";
 
 export const MyServices = () => {
     return (
-        <StyledMyServices>
+        <StyledMyServices id="services">
             <SectionTitle>My Services</SectionTitle>
             <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                 consequat duis enim velit mollit. lorem ipsum</Description>

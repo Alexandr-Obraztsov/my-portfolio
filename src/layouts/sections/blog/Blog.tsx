@@ -10,7 +10,7 @@ import proj3 from "../../../assets/images/proj-3.webp";
 
 export const Blog = () => {
     return (
-        <StyledBlog>
+        <StyledBlog id="blog">
             <SectionTitle>Blog</SectionTitle>
             <Description centered>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                 consequat duis enim velit mollit. lorem ipsum</Description>

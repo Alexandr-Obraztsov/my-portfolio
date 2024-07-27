@@ -14,9 +14,20 @@ export const ExtraSkillList = () => {
 };
 
 const StyledExtraSkillList = styled.ul`
-    list-style-image: url(${layers});
+    list-style: none;
+    margin-bottom: 50px;
 `
 
 const ExtraSkill = styled.li`
-
+    
+    &:before {
+        content: url(${layers});
+        margin-right: 15px;
+        display: inline-block;
+    }
+    
+    & + & {
+        margin-top: 30px;
+    }
+    
 `

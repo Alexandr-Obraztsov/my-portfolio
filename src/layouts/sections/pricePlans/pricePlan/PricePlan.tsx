@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import Icon from "../../../../components/icon/Icon";
+import {Icon} from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {theme} from "../../../../styles/Theme";
 import {Description} from "../../../../components/Description";
@@ -47,8 +47,8 @@ export const PricePlan = (props: PricePlanPropsType) => {
 
 const StyledPricePlan = styled.div`
     background-color: #fdfdfd;
-    max-width: 310px;
-    width: 100%;
+    flex: 1 1 auto;
+    max-width: 33%;
     padding: 54px 30px 25px;
     position: relative;
 `

@@ -7,7 +7,7 @@ type IconPropsType = {
     height?: string
 }
 
-const Icon = (props: IconPropsType) => {
+export const Icon = (props: IconPropsType) => {
     return (
         <svg width={props.width || '24'} height={props.height || '24'}
              viewBox={props.width && props.height ? `0 0 ${props.width} ${props.height}` : '0 0 24 24'} fill="none"
@@ -16,5 +16,3 @@ const Icon = (props: IconPropsType) => {
         </svg>
     );
 };
-
-export default Icon;

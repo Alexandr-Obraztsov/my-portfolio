@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
-import Icon from "../../../../components/icon/Icon";
+import {Icon} from "../../../../components/icon/Icon";
 
 type ProjectPropsType = {
     href?: string,

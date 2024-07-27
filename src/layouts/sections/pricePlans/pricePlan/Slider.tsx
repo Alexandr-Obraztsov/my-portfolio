@@ -53,9 +53,7 @@ const PaginationItem = styled.span`
 `
 
 const StyledSlider = styled.ul`
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
 `
 
 const Slide = styled.li``

@@ -1,72 +1,104 @@
 import React from 'react';
 import styled from "styled-components";
-import james from "../../../assets/images/james.webp"
-import Icon from "../../../components/icon/Icon";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import me from "../../../assets/images/me.jpeg"
 import {Progress} from "./progress/Progress";
 import {ExtraSkillList} from "./extraSkillList/ExtraSkillList";
 import {Link} from "../../../components/link/Link";
+import {theme} from "../../../styles/Theme";
+import {SocialMenu} from "./socialMenu/SocialMenu";
+import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Description} from "../../../components/Description";
 
 export const LeftMenu = () => {
     return (
         <StyledLeftMenu>
-            <Image src={james}/>
-            <Title>Rayan Adlardard</Title>
-            <Description>Font-end Developer</Description>
-            <SocialMenu>
-                <FlexWrapper gap="10px">
-                    <li><a href="#"><Icon id="facebook" width="7" height="12"/></a></li>
-                    <li><a href="#"><Icon id="instagram" width="15" height="15"/></a></li>
-                    <li><a href="#"><Icon id="twitter" width="15" height="15"/></a></li>
-                    <li><a href="#"><Icon id="linkedin" width="15" height="15"/></a></li>
-                    <li><a href="#"><Icon id="youtube" width="15" height="15"/></a></li>
-                    <li><a href="#"><Icon id="dribble" width="15" height="15"/></a></li>
+            <Section>
+                <FlexWrapper direction="column" alignItems="center">
+                    <Image src={me}/>
+                    <Title>Rayan Adlardard</Title>
+                    <Description margin="0 0 15px 0" centered>Font-end Developer</Description>
+                    <SocialMenu/>
                 </FlexWrapper>
-            </SocialMenu>
-            <span>Age: 24</span>
-            <span>Residence: BD</span>
-            <span>Freelance: Available</span>
-            <span>Address: Dhaka,Bangladesh</span>
-            <Title>Languages</Title>
-            <Progress text="Bangla" value="100"/>
-            <Progress text="English" value="80"/>
-            <Progress text="Spanish" value="60"/>
-            <Title>Skills</Title>
-            <Progress text="HTML" value="90"/>
-            <Progress text="CSS" value="85"/>
-            <Progress text="Js" value="80"/>
-            <Progress text="PHP" value="75"/>
-            <Progress text="WordPress" value="85"/>
-            <Title>Extra Skills</Title>
-            <ExtraSkillList/>
-            <Link text="Download CV" href="#"/>
+            </Section>
+            <Section>
+                <Text><MarkeredText>Age:</MarkeredText> 24</Text>
+                <Text><MarkeredText>Residence:</MarkeredText> BD</Text>
+                <Text><MarkeredText>Freelance:</MarkeredText> Available</Text>
+                <Text><MarkeredText>Address:</MarkeredText> Dhaka,Bangladesh</Text>
+            </Section>
+            <Section>
+                <Title>Languages</Title>
+                <Progress text="Bangla" value="100"/>
+                <Progress text="English" value="80"/>
+                <Progress text="Spanish" value="60"/>
+            </Section>
+            <Section>
+                <Title>Skills</Title>
+                <Progress text="HTML" value="90"/>
+                <Progress text="CSS" value="85"/>
+                <Progress text="Js" value="80"/>
+                <Progress text="PHP" value="75"/>
+                <Progress text="WordPress" value="85"/>
+            </Section>
+            <Section>
+                <Title>Extra Skills</Title>
+                <ExtraSkillList/>
+            </Section>
+            <Link text="Download CV" href="#" icon={{id: "cv2", width: "14", height: "17"}} padding="10px 40px"/>
         </StyledLeftMenu>
     );
 };
 
 const StyledLeftMenu = styled.aside`
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 315px;
-    height: 100vh;
-    background-color: #61dafb;
+    background-color: ${theme.colors.secondaryBg};
+    padding: 50px 45px 25px 40px;
 `
 
 const Image = styled.img`
- width: 100px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
 `
 
 const Title = styled.h2`
-
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 15px;
 `
 
-const Description = styled.span`
-
+const Section = styled.section`
+    margin-bottom: 50px;
+    position: relative;
+    
+    & {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -25px;
+            display: inline-block;
+            height: 2px;
+            background-color: ${theme.colors.primaryBg};
+        }
+    }
 `
 
-const SocialMenu = styled.ul`
-    list-style: none;
-    margin: 0;
-    padding: 0;
+const Text = styled.span`
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    
+    & + & {
+        margin-top: 10px;
+    }
+`
+
+const MarkeredText = styled.span`
+    background-color: ${theme.colors.accent};
+    display: inline-block;
+    padding: 0 5px;
 `

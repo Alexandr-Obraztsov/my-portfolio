@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 import styled from "styled-components";
 import {MyServices} from "./layouts/sections/myServices/MyServices";
 import {PricePlans} from "./layouts/sections/pricePlans/PricePlans";
@@ -12,32 +11,51 @@ import {Blog} from "./layouts/sections/blog/Blog";
 import {Logos} from "./layouts/sections/logos/Logos";
 import {Footer} from "./layouts/footer/Footer";
 import {Contacts} from "./layouts/sections/contacts/Contacts";
+import {RightMenu} from "./layouts/asides/rightMenu/RightMenu";
+import {LeftMenu} from "./layouts/asides/leftMenu/LeftMenu";
+import {FlexWrapper} from "./components/FlexWrapper";
+import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 
 
 function App() {
     return (
-        <Box>
-            <MainMenu/>
-            <MyServices/>
-            <PricePlans/>
-            <Recommendations/>
-            <Education/>
-            <WorkHistory/>
-            <Portfolio/>
-            <Blog/>
-            <Contacts/>
-            <Logos/>
-            <Footer/>
-        </Box>
+        <FlexWrapper alignItems="flex-start" gap="20px">
+            <Content>
+                <LeftMenu/>
+                <MainContent>
+                    <MainMenu/>
+                    <MyServices/>
+                    <PricePlans/>
+                    <Recommendations/>
+                    <Education/>
+                    <WorkHistory/>
+                    <Portfolio/>
+                    <Blog/>
+                    <Contacts/>
+                    <Logos/>
+                    <Footer/>
+                </MainContent>
+            </Content>
+
+            <RightMenu/>
+        </FlexWrapper>
     );
 }
 
 
-const Box = styled.div`
-    max-width: 970px;
-    width: 100%;
-    margin: 0 auto;
+const MainContent = styled.div`
 `
 
+const Content = styled.div`
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    gap: 20px;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`
 
 export default App;
