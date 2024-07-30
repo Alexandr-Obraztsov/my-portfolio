@@ -27,6 +27,13 @@ const StyledPost = styled.article`
     flex: 1 1 auto;
     max-width: 33%;
     background-color: #fdfdfd;
+    
+    ${Description} {
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+    }
 `
 
 const Image = styled.img`

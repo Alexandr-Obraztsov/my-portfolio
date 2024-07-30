@@ -18,10 +18,10 @@ import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
 
 function App() {
     return (
-        <FlexWrapper alignItems="flex-start" gap="20px" justifyContent="center">
-            <Content>
+        <>
+            <Content alignItems="flex-start" justifyContent="center" height="100vh" gap="20px">
                 <LeftMenu/>
-                <Container>
+                <Container direction="column" gap="70px">
                     <MainMenu/>
                     <MyServices/>
                     <PricePlans/>
@@ -37,26 +37,21 @@ function App() {
             </Content>
 
             <RightMenu/>
-        </FlexWrapper>
+        </>
     );
 }
 
 
-const Container = styled.div`
-    max-width: 1440px;
+const Container = styled(FlexWrapper)`
+    max-width: 1520px;
     width: 100%;
+    
 `
 
-const Content = styled.div`
-    display: flex;
-    align-items: flex-start;
-    height: 100vh;
+const Content = styled(FlexWrapper)`
     overflow-y: auto;
-    gap: 20px;
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    margin-right: 128px;
+    width: unset;
 `
 
 export default App;

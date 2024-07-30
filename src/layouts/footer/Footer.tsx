@@ -17,7 +17,6 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     background-color: ${theme.colors.secondaryBg};
-    margin-top: 70px;
     height: 60px;
 `
 

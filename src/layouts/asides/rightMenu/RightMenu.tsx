@@ -18,12 +18,15 @@ export const RightMenu = () => {
     );
 };
 
+
 const StyledRightMenu = styled.aside`
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100vh;
     width: 108px;
     background-color: ${theme.colors.secondaryBg};
     padding: 50px 10px 80px 10px;
-    flex-shrink: 0;
 `
 
 const IconWrapper = styled.div`

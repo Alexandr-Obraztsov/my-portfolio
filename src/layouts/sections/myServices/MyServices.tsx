@@ -6,6 +6,63 @@ import {Service} from "./service/Service";
 import {theme} from "../../../styles/Theme";
 import {SectionDescription} from "../../../components/SectionDescription";
 
+const services = [
+    {
+        icon: {
+            id: "coding",
+            width: "68",
+            height: "68"
+        },
+        title: "web development",
+        descripion: "blog, e-commerce"
+    },
+    {
+        icon: {
+            id: "illustration",
+            width: "68",
+            height: "68"
+        },
+        title: "uI/uX design",
+        descripion: "Mobile app, website design"
+    },
+    {
+        icon: {
+            id: "microphone",
+            width: "74",
+            height: "74"
+        },
+        title: "sound design",
+        descripion: "Voice Over, Beat Making"
+    },
+    {
+        icon: {
+            id: "game-development",
+            width: "74",
+            height: "74"
+        },
+        title: "game design",
+        descripion: "Character Design, Props & Objects"
+    },
+    {
+        icon: {
+            id: "photographer",
+            width: "74",
+            height: "74"
+        },
+        title: "photography",
+        descripion: "portrait, product photography"
+    },
+    {
+        icon: {
+            id: "logo",
+            width: "74",
+            height: "74"
+        },
+        title: "logo design",
+        descripion: "Branding, logo design",
+    }
+]
+
 export const MyServices = () => {
     return (
         <StyledMyServices id="services">
@@ -14,19 +71,7 @@ export const MyServices = () => {
                 consequat duis enim velit mollit. lorem ipsum</SectionDescription>
             <FlexWrapper direction="column" alignItems="center">
                 <FlexWrapper gap="20px" wrap="wrap">
-                    <Service icon={{id: "coding", width: "68", height: "68"}} title="web development"
-                             descripion="blog, e-commerce"/>
-                    <Service icon={{id: "illustration", width: "68", height: "68"}} title="uI/uX design"
-                             descripion="Mobile app, website design"/>
-                    <Service icon={{id: "microphone", width: "74", height: "74"}} title="sound design"
-                             descripion="Voice Over, Beat Making"/>
-                    <Service icon={{id: "game-development", width: "74", height: "74"}} title="game design"
-                             descripion="Character Design, Props & Objects"/>
-                    <Service icon={{id: "photographer", width: "74", height: "74"}} title="photography"
-                             descripion="portrait, product photography"/>
-                    <Service title="advertising"
-                             descripion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. "
-                             link="#"/>
+                    {services.map((val, index) => <Service key={index} icon={val.icon} title={val.title} descripion={val.descripion}/>)}
                 </FlexWrapper>
             </FlexWrapper>
         </StyledMyServices>

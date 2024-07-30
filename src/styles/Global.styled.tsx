@@ -9,6 +9,10 @@ export const GlobalStyled = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    
+    ::-webkit-scrollbar {
+        width: 0;
+    }
 
     body {
         font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,11 +29,6 @@ export const GlobalStyled = createGlobalStyle`
     
     ul {
         list-style: none;
-    }
-
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
     }
 
 `

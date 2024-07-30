@@ -5,13 +5,13 @@ import {theme} from "../../../../styles/Theme";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Description} from "../../../../components/Description";
 
-type RecommendationPropsType = {
+export type RecommendationPropsType = {
     stars: number,
     title: string,
     message: string,
     photo: string,
     username: string,
-    usernameDescription: string
+    usernameDescription: string,
 }
 
 export const Recommendation = (props: RecommendationPropsType) => {
@@ -20,11 +20,11 @@ export const Recommendation = (props: RecommendationPropsType) => {
             <Rating stars={props.stars}/>
             <Title>{props.title}</Title>
             <Description>{props.message}</Description>
-            <FlexWrapper gap="25px" alignItems="center" wrap="wrap">
+            <FlexWrapper gap="25px" alignItems="center" direction="row">
                 <Image src={props.photo}/>
                 <FlexWrapper direction="column" gap="5px" justifyContent="center">
                     <Username>{props.username}</Username>
-                    <Description>{props.usernameDescription}</Description>
+                    <Description margin="0">{props.usernameDescription}</Description>
                 </FlexWrapper>
             </FlexWrapper>
         </StyledRecommendation>

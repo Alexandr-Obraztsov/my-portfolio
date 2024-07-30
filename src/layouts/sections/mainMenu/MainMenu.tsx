@@ -44,6 +44,7 @@ const Content = styled.article`
     padding-top: 90px;
     padding-bottom: 74px;
     flex: 1 1 300px;
+    max-width: 600px;
 `
 
 const Picture = styled.img`
