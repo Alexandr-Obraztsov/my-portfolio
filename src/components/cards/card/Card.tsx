@@ -8,7 +8,7 @@ import {theme} from "../../../styles/Theme";
 export const Card = (props: CardPropsType) => {
     return (
         <StyledCard>
-            <FlexWrapper justifyContent="space-between" wrap="wrap">
+            <FlexWrapper justifyContent="space-between" gap="40px" alignItems="flex-start">
                 <div>
                     <Title>{props.title1}</Title>
                     <FlexWrapper gap="21px">
@@ -32,7 +32,7 @@ const StyledDescription = styled(Description)`
 const StyledCard = styled.div`
     padding: 47px 30px 11px;
     position: relative;
-    
+
     & + & {
         &:before {
             content: "";
@@ -42,12 +42,22 @@ const StyledCard = styled.div`
             display: inline-block;
             top: -11px;
             position: absolute;
-            
+
         }
     }
+
+    ${FlexWrapper} div:first-child {
+        flex-shrink: 0;
+    }
     
-    div + div {
-        flex: 0 1 60%;
+    ${FlexWrapper} div:last-child {
+        max-width: 700px;
+    }
+    
+    ${theme.media.mobile} {
+        & > ${FlexWrapper}{
+            flex-direction: column;
+        }
     }
 `
 
@@ -56,8 +66,8 @@ const Title = styled.h3`
     font-weight: 500;
     font-size: 18px;
     
-    & + ${Description} {
-        max-width: unset;
+    ${theme.media.mobile} {
+        margin-bottom: 14px;
     }
 `
 

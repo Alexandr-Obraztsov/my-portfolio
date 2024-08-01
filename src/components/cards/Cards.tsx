@@ -9,7 +9,7 @@ import {theme} from "../../styles/Theme";
 export const Cards = (props: {cards: Array<CardPropsType>}) => {
     return (
         <StyledCards>
-            <FlexWrapper direction="column" alignItems="center">
+            <FlexWrapper direction="column">
                 {props.cards.map((cardProps, index)=>{
                     return <Card key={index}
                         title1={cardProps.title1}

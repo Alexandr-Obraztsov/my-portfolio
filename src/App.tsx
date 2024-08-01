@@ -27,7 +27,7 @@ function App() {
                     <MyServices/>
                     <PricePlans/>
                     <Recommendations/>
-                    {/*<Education/>*/}
+                    <Education/>
                     {/*<WorkHistory/>*/}
                     {/*<Portfolio/>*/}
                     {/*<Blog/>*/}
