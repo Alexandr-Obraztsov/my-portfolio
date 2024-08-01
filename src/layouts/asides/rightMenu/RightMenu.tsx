@@ -28,9 +28,7 @@ const IconWrapper = styled.div`
     height: 25px;
     
     ${theme.media.tablet} {
-        top: 50%;
-        left: 50px;
-        transform: translateY(-50%);
+        display: none;
     }
 `
 

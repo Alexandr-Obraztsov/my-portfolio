@@ -25,15 +25,15 @@ function App() {
                 <Container direction="column" gap="70px">
                     <MainMenu/>
                     <MyServices/>
-                    <PricePlans/>
-                    <Recommendations/>
-                    <Education/>
-                    <WorkHistory/>
-                    <Portfolio/>
-                    <Blog/>
-                    <Contacts/>
-                    <Logos/>
-                    <Footer/>
+                    {/*<PricePlans/>*/}
+                    {/*<Recommendations/>*/}
+                    {/*<Education/>*/}
+                    {/*<WorkHistory/>*/}
+                    {/*<Portfolio/>*/}
+                    {/*<Blog/>*/}
+                    {/*<Contacts/>*/}
+                    {/*<Logos/>*/}
+                    {/*<Footer/>*/}
                 </Container>
             </Content>
 
@@ -47,12 +47,16 @@ const Container = styled(FlexWrapper)`
     max-width: 1520px;
     width: 100%;
     
+    ${theme.media.tablet} {
+        padding-bottom: 80px;
+    }
 `
 
 const Content = styled(FlexWrapper)`
     overflow-y: auto;
     margin-right: 128px;
     width: unset;
+    padding: 15px;
     
     ${theme.media.tablet} {
         margin-right: 0;

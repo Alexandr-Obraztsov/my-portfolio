@@ -52,6 +52,10 @@ export const LeftMenu = () => {
 const StyledLeftMenu = styled.aside`
     background-color: ${theme.colors.secondaryBg};
     padding: 50px 45px 25px 40px;
+    display: none;
+    ${theme.media.tablet} {
+        
+    }
 `
 
 const Image = styled.img`

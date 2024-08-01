@@ -33,6 +33,14 @@ const Title = styled.h2`
     span {
         color: ${theme.colors.accent};
     }
+    
+    ${theme.media.mobile} {
+        margin-bottom: 90px;
+        
+        & + ${Description} {
+            margin-bottom: 34px;
+        }
+    }
 `
 
 const StyledMainMenu = styled.section`
