@@ -22,7 +22,8 @@ export const Project = (props: ProjectPropsType) => {
 const IconWrapper = styled.div``
 
 const StyledProject = styled.a`
-    width: calc((100% - 40px)/3);
+    min-width: 235px;
+    flex: 1 1 32%;
     height: 300px;
     position: relative;
     

@@ -28,8 +28,8 @@ function App() {
                     <PricePlans/>
                     <Recommendations/>
                     <Education/>
-                    {/*<WorkHistory/>*/}
-                    {/*<Portfolio/>*/}
+                    <WorkHistory/>
+                    <Portfolio/>
                     {/*<Blog/>*/}
                     {/*<Contacts/>*/}
                     {/*<Logos/>*/}

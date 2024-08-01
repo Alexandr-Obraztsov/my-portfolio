@@ -22,7 +22,7 @@ export const Portfolio = () => {
             <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                 consequat duis enim velit mollit. lorem ipsum</SectionDescription>
             <Menu>
-                <FlexWrapper gap="37px" justifyContent="center">
+                <FlexWrapper gap="37px" justifyContent="flex-start">
                     {menuItemNames.map((name) => {
                         return <MenuItem>
                             <a href="#">{name}</a>
@@ -48,10 +48,17 @@ const StyledPorfolio = styled.section`
 const Menu = styled.ul`
     list-style: none;
     margin-bottom: 50px;
+    overflow-y: auto;
+    
+    ${FlexWrapper} {
+        margin: 0 auto;
+        width: min-content;
+    }
 `
 
 const MenuItem = styled.li`
     a {
+        white-space: nowrap;
       color: ${theme.colors.primaryText};
         font-weight: 500;
         font-size: 18px;
