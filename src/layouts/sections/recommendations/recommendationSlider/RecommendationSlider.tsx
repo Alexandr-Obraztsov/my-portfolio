@@ -7,9 +7,8 @@ import {theme} from "../../../../styles/Theme";
 export const RecommendationSlider = (props: {recommendations: Array<RecommendationPropsType>}) => {
     return (
         <StyledSlider>
-            <FlexWrapper gap="20px" justifyContent="flex-start" wrap="nowrap">
+            <FlexWrapper gap="20px" justifyContent="center">
                 {props.recommendations.map((recommendation, index) => <Slide><Recommendation key={index} {...recommendation}/></Slide>)}
-
             </FlexWrapper>
 
             <Pagination>
@@ -41,16 +40,23 @@ const PaginationItem = styled.a`
         width: 20px;
     }
 `
+const Slide = styled.li`
+    width: 310px;
+    flex-grow: 1;
+`
 
 const StyledSlider = styled.ul`
     
-    ${FlexWrapper} {
-        overflow-y: auto;
+    padding: 20px 0;
+    ${theme.media.notDesktop} {
+        ${Slide}:nth-child(3) {
+            display: none;
+        }
     }
-`
 
-const Slide = styled.li`
-    max-width: calc((100% - 40px) / 3);
-    width: 100%;
-    flex-shrink: 0;
+    ${theme.media.mobile} {
+        ${Slide}:nth-child(2) {
+            display: none;
+        }
+    }
 `

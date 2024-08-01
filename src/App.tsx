@@ -26,7 +26,7 @@ function App() {
                     <MainMenu/>
                     <MyServices/>
                     <PricePlans/>
-                    {/*<Recommendations/>*/}
+                    <Recommendations/>
                     {/*<Education/>*/}
                     {/*<WorkHistory/>*/}
                     {/*<Portfolio/>*/}

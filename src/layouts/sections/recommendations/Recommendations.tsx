@@ -31,14 +31,6 @@ const recommendations = [
         photo: talanPhoto,
         username: "Talan Smith",
         usernameDescription: "Front-end Developer"
-    },
-    {
-        stars: 5,
-        title: "Great Quality!",
-        message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....",
-        photo: talanPhoto,
-        username: "Talan Smith",
-        usernameDescription: "Front-end Developer"
     }
 ];
 
