@@ -45,10 +45,10 @@ export const PricePlan = (props: PricePlanPropsType) => {
     );
 };
 
-const StyledPricePlan = styled.div`
+const StyledPricePlan = styled.article`
     background-color: #fdfdfd;
     flex: 1 1 auto;
-    max-width: 33%;
+    min-width: 310px;
     padding: 54px 30px 25px;
     position: relative;
 `

@@ -35,7 +35,7 @@ export const PricePlans = () => {
         <StyledPricePlans id="cv">
             <SectionTitle>Price Plans</SectionTitle>
             <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-            <FlexWrapper justifyContent="center" gap="20px" >
+            <FlexWrapper gap="20px" >
                 {plans.map((plan)=>{
                     return <PricePlan title={plan.title} price={plan.price} description={plan.description} includes={plan.includes} comment={plan.comment}/>
                 })}
@@ -46,5 +46,9 @@ export const PricePlans = () => {
 
 const StyledPricePlans = styled.section`
     background-color: ${theme.colors.primaryBg};
+    
+    ${FlexWrapper} {
+        overflow-y: auto;
+    }
 `
 

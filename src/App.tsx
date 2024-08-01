@@ -25,7 +25,7 @@ function App() {
                 <Container direction="column" gap="70px">
                     <MainMenu/>
                     <MyServices/>
-                    {/*<PricePlans/>*/}
+                    <PricePlans/>
                     {/*<Recommendations/>*/}
                     {/*<Education/>*/}
                     {/*<WorkHistory/>*/}
