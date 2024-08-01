@@ -14,6 +14,7 @@ import {RightMenu} from "./layouts/asides/rightMenu/RightMenu";
 import {LeftMenu} from "./layouts/asides/leftMenu/LeftMenu";
 import {FlexWrapper} from "./components/FlexWrapper";
 import {MainMenu} from "./layouts/sections/mainMenu/MainMenu";
+import {theme} from "./styles/Theme";
 
 
 function App() {
@@ -52,6 +53,10 @@ const Content = styled(FlexWrapper)`
     overflow-y: auto;
     margin-right: 128px;
     width: unset;
+    
+    ${theme.media.tablet} {
+        margin-right: 0;
+    }
 `
 
 export default App;

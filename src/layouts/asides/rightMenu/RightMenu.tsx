@@ -9,15 +9,30 @@ export const RightMenu = () => {
     return (
         <StyledRightMenu>
             <IconWrapper>
-                <Icon id="contrast" width="30" height="30"/>
+                <Icon id="contrast" width="25" height="25"/>
             </IconWrapper>
-            <FlexWrapper alignItems="center" justifyContent="center" gap="120px" direction="column" height="100%">
+            <FlexWrapper alignItems="center" justifyContent="center" height="100%">
                 <Menu/>
             </FlexWrapper>
         </StyledRightMenu>
     );
 };
 
+
+const IconWrapper = styled.div`
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 25px;
+    
+    ${theme.media.tablet} {
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+    }
+`
 
 const StyledRightMenu = styled.aside`
     position: absolute;
@@ -26,9 +41,12 @@ const StyledRightMenu = styled.aside`
     height: 100vh;
     width: 108px;
     background-color: ${theme.colors.secondaryBg};
-    padding: 50px 10px 80px 10px;
-`
 
-const IconWrapper = styled.div`
-    text-align: center;
+    ${theme.media.tablet} {
+        top: calc(100vh - 70px);
+        left: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 0 20px 0 rgba(74, 74, 74, 0.25);
+    }
 `

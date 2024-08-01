@@ -4,53 +4,142 @@ import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
 
+const menuItems = [
+    {
+        description: "Home",
+        href: "#home",
+        icon: {
+            id: "home",
+            width: "18",
+            height: "15"
+        }
+    },
+    {
+        description: "Code",
+        href: "#services",
+        icon: {
+            id: "services",
+            width: "18.5",
+            height: "18"
+        }
+    },
+    {
+        description: "Resume",
+        href: "#cv",
+        icon: {
+            id: "cv",
+            width: "16",
+            height: "15"
+        }
+    },
+    {
+        description: "Portfolio",
+        href: "#portfolio",
+        icon: {
+            id: "portfolio",
+            width: "16",
+            height: "16"
+        }
+    },
+    {
+        description: "Blog",
+        href: "#blog",
+        icon: {
+            id: "blog",
+            width: "15",
+            height: "15"
+        }
+    },
+    {
+        description: "Contacts",
+        href: "#contacts",
+        icon: {
+            id: "contact",
+            width: "15",
+            height: "15"
+        }
+    }
+]
+
+
 export const Menu = () => {
     return (
-        <nav>
+        <StyledMenu>
             <MenuList>
                 <FlexWrapper alignItems="center" gap="65px" direction="column">
-                    <MenuItem>
-                        <a href="#home">
-                            <Icon id="home" width="18" height="15"/>
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#services">
-                            <Icon id="services" width="16.5" height="18"/>
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#cv">
-                            <Icon id="cv" width="16" height="15"/>
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#portfolio">
-                            <Icon id="portfolio" width="16" height="16"/>
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#blog">
-                            <Icon id="blog" width="15" height="15"/>
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#contact">
-                            <Icon id="contact" width="15" height="15"/>
-                        </a>
-                    </MenuItem>
+                    {menuItems.map((item, index) => (
+                        <MenuItem key={index}>
+                            <ItemDescription>{item.description}</ItemDescription>
+                            <a href={item.href}>
+                                <Icon id={item.icon.id} width={item.icon.width} height={item.icon.height}/>
+                            </a>
+                        </MenuItem>
+                    ))}
                 </FlexWrapper>
             </MenuList>
-        </nav>
+        </StyledMenu>
     );
 };
 
 const MenuList = styled.ul`
-    list-style: none;
+    
+    ${theme.media.tablet} {
+        ${FlexWrapper} {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+            gap: unset;
+        }
+    }
+`
+
+const ItemDescription = styled.span`
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 2px;
+    left: 50%;
+    top: -42px;
+    transform: translateX(-50%);
+    
+    display: none;
+    background-color: ${theme.colors.primaryText};
+    color: white;
+    
+    padding: 6px 15px 3px;
+    
+    &::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 14px;
+        background-color: ${theme.colors.primaryText};
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        clip-path: polygon(0 20%, 100% 20%, 50% 100%);
+    }
 `
 
 const MenuItem = styled.li`
+    position: relative;
+    
+    &:hover {
+        a:before {
+            background-color: ${theme.colors.accent};
+        }
+    
+        ${ItemDescription} {
+            display: block;
+        }
 
+        svg {
+            fill: ${theme.colors.primaryText};
+        }
+    }
+    
     a {
         position: relative;
 
@@ -73,16 +162,11 @@ const MenuItem = styled.li`
             transform: translate(-50%, -50%);
             z-index: 1;
         }
-        
-        &:hover {
-            &:before {
-                background-color: ${theme.colors.accent};
-            }
-            
-            svg {
-                fill: ${theme.colors.primaryText};
-            }
-        }
     }
 `
 
+
+const StyledMenu = styled.nav`
+    max-width: 420px;
+    width: 100%;
+`
