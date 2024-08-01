@@ -53,13 +53,8 @@ const services = [
         descripion: "portrait, product photography"
     },
     {
-        icon: {
-            id: "logo",
-            width: "74",
-            height: "74"
-        },
-        title: "logo design",
-        descripion: "Branding, logo design",
+        title: "advertising",
+        descripion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. ",
     }
 ]
 
@@ -70,7 +65,7 @@ export const MyServices = () => {
             <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                 consequat duis enim velit mollit. lorem ipsum</SectionDescription>
             <FlexWrapper direction="column" alignItems="center">
-                <FlexWrapper gap="20px" wrap="wrap">
+                <FlexWrapper gap="20px" wrap="wrap" justifyContent="center">
                     {services.map((val, index) => <Service key={index} icon={val.icon} title={val.title} descripion={val.descripion}/>)}
                 </FlexWrapper>
             </FlexWrapper>

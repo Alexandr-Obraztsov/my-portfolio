@@ -35,7 +35,7 @@ const ImageWrapper = styled.div`
 `
 
 const StyledService = styled.div`
-    flex: 1 1 30%;
+    flex: 1 1 250px;
     min-height: 225px;
     background-color: #fbfbfb;
     padding: 30px 20px;
@@ -47,4 +47,5 @@ const Title = styled.h3`
     font-size: 18px;
     color: ${theme.colors.primaryText};
     text-transform: capitalize;
+    text-align: center;
 `
