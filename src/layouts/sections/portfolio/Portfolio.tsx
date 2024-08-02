@@ -13,7 +13,9 @@ import {theme} from "../../../styles/Theme";
 import {SectionDescription} from "../../../components/SectionDescription";
 
 
-const menuItemNames = ["All categories", "UI Design", "Web Templates", "Logo", "Branding"]
+const menuItemNames = ["All categories", "UI Design", "Web Templates", "Logo", "Branding"];
+
+
 
 export const Portfolio = () => {
     return (

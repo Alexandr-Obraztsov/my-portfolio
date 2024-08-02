@@ -32,7 +32,7 @@ const StyledForm = styled.form`
     background-color: ${theme.colors.secondaryBg};
     height: 100%;
     padding: 25px;
-    grid-area: 2 / 1 / span 3 / 1;
+    grid-area: f;
 
     textarea {
         height: 210px;

@@ -32,7 +32,7 @@ export const Blog = () => {
             <SectionTitle>Blog</SectionTitle>
             <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                 consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-            <FlexWrapper gap="10px" justifyContent="center">
+            <FlexWrapper gap="10px" justifyContent="flex-start">
                 {posts.map(post => <Post {...post}/>)}
             </FlexWrapper>
         </StyledBlog>
@@ -40,5 +40,8 @@ export const Blog = () => {
 };
 
 const StyledBlog = styled.section`
+    ${FlexWrapper}{
+        overflow-y: auto;
+    }
 `
 

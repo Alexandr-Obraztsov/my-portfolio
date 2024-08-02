@@ -11,13 +11,14 @@ type ContactCardPropsType = {
         height: string
     },
 
+    area: string,
     titles: Array<string>,
     texts: Array<string>
 }
 
 export const ContactCard = (props: ContactCardPropsType) => {
     return (
-        <StyledContactCard>
+        <StyledContactCard area={props.area}>
             <IconWrapper>
                 <Icon id={props.icon.id} width={props.icon.width} height={props.icon.height}/>
             </IconWrapper>
@@ -33,7 +34,9 @@ export const ContactCard = (props: ContactCardPropsType) => {
     );
 };
 
-const StyledContactCard = styled.article`
+
+const StyledContactCard = styled.article<{area: string}>`
+    grid-area: ${props => props.area};
     background-color: ${theme.colors.secondaryBg};
     padding: 25px;
     
@@ -65,7 +68,7 @@ const IconWrapper = styled.div`
     position: relative;
     
     svg {
-        z-index: 1;
+        position: relative;
     }
     
     &:before {

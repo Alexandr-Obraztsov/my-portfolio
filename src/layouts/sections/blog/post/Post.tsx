@@ -25,7 +25,7 @@ export const Post = (props : PostPropsType) => {
 
 const StyledPost = styled.article`
     flex: 1 1 auto;
-    max-width: 33%;
+    min-width: 310px;
     background-color: #fdfdfd;
     
     ${Description} {

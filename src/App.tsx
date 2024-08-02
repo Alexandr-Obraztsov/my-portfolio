@@ -30,8 +30,8 @@ function App() {
                     <Education/>
                     <WorkHistory/>
                     <Portfolio/>
-                    {/*<Blog/>*/}
-                    {/*<Contacts/>*/}
+                    <Blog/>
+                    <Contacts/>
                     {/*<Logos/>*/}
                     {/*<Footer/>*/}
                 </Container>
