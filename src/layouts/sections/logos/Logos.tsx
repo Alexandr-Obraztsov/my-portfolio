@@ -6,7 +6,7 @@ import {Icon} from "../../../components/icon/Icon";
 export const Logos = () => {
     return (
         <StyledLogos>
-            <FlexWrapper justifyContent="space-evenly">
+            <FlexWrapper justifyContent="space-evenly" wrap="wrap">
                 <Icon id="logo1" width="128" height="90"/>
                 <Icon id="logo2" width="140" height="140"/>
                 <Icon id="logo3" width="140" height="140"/>

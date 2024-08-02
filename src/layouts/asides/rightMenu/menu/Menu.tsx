@@ -3,11 +3,12 @@ import {Icon} from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
+import {Link} from "react-scroll";
 
 const menuItems = [
     {
         description: "Home",
-        href: "#home",
+        href: "home",
         icon: {
             id: "home",
             width: "18",
@@ -16,7 +17,7 @@ const menuItems = [
     },
     {
         description: "Code",
-        href: "#services",
+        href: "services",
         icon: {
             id: "services",
             width: "18.5",
@@ -25,7 +26,7 @@ const menuItems = [
     },
     {
         description: "Resume",
-        href: "#cv",
+        href: "cv",
         icon: {
             id: "cv",
             width: "16",
@@ -34,7 +35,7 @@ const menuItems = [
     },
     {
         description: "Portfolio",
-        href: "#portfolio",
+        href: "portfolio",
         icon: {
             id: "portfolio",
             width: "16",
@@ -52,7 +53,7 @@ const menuItems = [
     },
     {
         description: "Contacts",
-        href: "#contacts",
+        href: "contacts",
         icon: {
             id: "contact",
             width: "15",
@@ -70,9 +71,9 @@ export const Menu = () => {
                     {menuItems.map((item, index) => (
                         <MenuItem key={index}>
                             <ItemDescription>{item.description}</ItemDescription>
-                            <a href={item.href}>
+                            <Link className="active" to={item.href} smooth={true}>
                                 <Icon id={item.icon.id} width={item.icon.width} height={item.icon.height}/>
-                            </a>
+                            </Link>
                         </MenuItem>
                     ))}
                 </FlexWrapper>
